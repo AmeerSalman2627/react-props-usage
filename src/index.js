@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
+import CardDetails from "./card";
+const App = () =>{
+    return (
+        <div class="ui three column grid">
+            <div className="row">
+                <CardDetails name="Jane" phno="986574124" email="aasdc@gmail.com"/>
+                <CardDetails name="Alice" phno="987531457" email="alice@gmail.com"/>
+                <CardDetails name="jofra" phno="9653214785" email="jofra@gmail.com"/>
+            </div>
+        </div>
+       
+    );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render(<App />, document.querySelector('#root'));
